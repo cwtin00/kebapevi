@@ -114,6 +114,8 @@ body {
   letter-spacing: 0.02em;
 }
 
+
+
 .hero-title span {
   display: inline-block;
   font-style: italic;
@@ -214,12 +216,12 @@ main {
   letter-spacing: 0.01em;
 }
 
-.item-desc {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 300;
-  color: var(--color-text-muted);
-  line-height: 1.55;
+.item-desc{
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9b9488;
+  max-width: 360px;
 }
 
 .item-price {
@@ -313,11 +315,13 @@ main {
   }
 }
 
+/* FOTOĞRAFLI MENÜ KARTI */
+
 .menu-item{
-    min-height:140px;
     display:flex;
     align-items:center;
     gap:18px;
+    min-height:140px;
 }
 
 .menu-img{
@@ -330,4 +334,50 @@ main {
 
 .item-info{
     flex:1;
+}
+
+.item-name{
+    margin-bottom:8px;
+}
+
+.item-desc{
+    margin-top:6px;
+    font-size:14px;
+    line-height:1.5;
+    color:#9b9488;
+}
+
+.item-price{
+    margin-left:auto;
+    white-space:nowrap;
+    font-size:35px;
+    align-self:center;
+}
+
+/* MOBİL */
+
+@media (max-width: 520px){
+
+    .menu-item{
+        gap:12px;
+        padding:14px;
+    }
+
+    .menu-img{
+        width:90px;
+        height:90px;
+    }
+
+    .item-name{
+        font-size:18px;
+    }
+
+    .item-desc{
+        font-size:12px;
+    }
+
+    .item-price{
+        font-size:26px !important;
+    }
+
 }
