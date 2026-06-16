@@ -1,0 +1,333 @@
+/* ============================
+   DEĞİŞKENLER (TEMA)
+============================ */
+:root {
+  --color-bg: #121212;
+  --color-bg-alt: #1a1a1a;
+  --color-card: #1c1c1c;
+  --color-gold: #c9a227;
+  --color-gold-light: #e3c567;
+  --color-text: #f1ede3;
+  --color-text-muted: #9c968a;
+  --color-border: rgba(201, 162, 39, 0.18);
+
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Jost', sans-serif;
+
+  --nav-height: 58px;
+}
+
+/* ============================
+   GENEL SIFIRLAMA
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================
+   KATEGORİ NAVİGASYONU (STICKY)
+============================ */
+.category-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--nav-height);
+}
+
+.nav-scroll {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 16px;
+  gap: 28px;
+  scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+/* ============================
+   HERO BÖLÜMÜ
+============================ */
+.hero {
+  text-align: center;
+  padding: 64px 24px 48px;
+  background: linear-gradient(180deg, #161616 0%, #121212 100%);
+}
+
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.hero-title span {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(120deg, #f5d98b 0%, #c9a227 50%, #9c7a17 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-top: 18px;
+}
+
+/* ============================
+   AYRAÇ (ORNAMENT - SİGNATURE)
+============================ */
+.ornament,
+.section-divider {
+  width: 160px;
+  max-width: 80%;
+  margin: 24px auto;
+  color: var(--color-gold);
+}
+
+.ornament svg,
+.section-divider svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-divider {
+  margin: 36px auto;
+  opacity: 0.6;
+}
+
+/* ============================
+   MENÜ BÖLÜMLERİ
+============================ */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 64px;
+}
+
+.menu-section {
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+  padding-top: 24px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.9rem;
+  color: var(--color-gold-light);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ============================
+   ÜRÜN KARTLARI
+============================ */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.item-desc {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.item-price {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-gold-light);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+/* ============================
+   FOOTER
+============================ */
+.site-footer {
+  text-align: center;
+  padding: 40px 24px 60px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-gold-light);
+  letter-spacing: 0.04em;
+}
+
+.footer-note {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+}
+
+/* ============================
+   FADE-IN ANİMASYONU
+============================ */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================
+   MASAÜSTÜ / TABLET UYARLAMASI
+============================ */
+@media (min-width: 768px) {
+  .hero {
+    padding: 96px 24px 64px;
+  }
+
+  .hero-title {
+    font-size: 3.6rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .nav-scroll {
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .item-name {
+    font-size: 1.4rem;
+  }
+
+  .item-desc {
+    font-size: 0.88rem;
+  }
+
+  .item-price {
+    font-size: 1.3rem;
+  }
+
+  .menu-item {
+    padding: 22px 28px;
+  }
+}
+
+.menu-item{
+    min-height:140px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.menu-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:14px;
+    flex-shrink:0;
+}
+
+.item-info{
+    flex:1;
+}
